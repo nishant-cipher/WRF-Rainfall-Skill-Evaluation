@@ -1,49 +1,59 @@
- 🌧️ WRF Model Rainfall Skill Evaluation (CNTL vs DA)
+# 🌧️ WRF Model Rainfall Skill Evaluation (CNTL vs DA)
 
-**Developed by Nishant**
-
-This repository evaluates rainfall forecasts from the WRF model during *Super Cyclone Kyarr (October 2019)*.
-It compares **Control (CNTL)** and **Data Assimilation (DA)** configurations against **GPM** and **TRMM** satellite datasets.
-
----
-
-## 🔍 Features
-- Day-wise (1–6) and threshold-wise (2.5–124.5 mm) verification
-- Metrics: POD, ETS, HSS, RMSE, Bias, Correlation
-- Automatic plot generation and `.docx` report builder
+> 🔍 **Developed by Nishant**  
+> Evaluating rainfall prediction accuracy of the **Weather Research and Forecasting (WRF)** model during **Super Cyclone Kyarr (2019)** using **Control (CNTL)** and **Data Assimilation (DA)** experiments.  
+> This open-source project performs both **day-wise** and **threshold-wise** skill analysis using **GPM** and **TRMM** observations, producing visual analytics and an automated `.docx` report.
 
 ---
 
-## 🧩 Folder Structure
-WRF-Rainfall-Skill-Evaluation/
-├── data/
-│ ├── sample_case_study/
-│ ├── README_data.md
-├── notebooks/
-│ └── Rainfall_Skill_Evaluation.ipynb
-├── outputs/
-│ ├── plots/
-│ └── reports/
-├── requirements.txt
-├── LICENSE
-├── .gitignore
-└── README.md
+## 🚀 Highlights
 
-yaml
-Copy code
+✅ **Day-wise & threshold-wise skill evaluation** (POD, ETS, HSS, RMSE, Bias, Correlation)  
+✅ **Comparison between CNTL & DA runs** against GPM and TRMM observations  
+✅ **Automatic report generation** (`.docx` format with plots and tables)  
+✅ **Clean, reproducible Python/Colab workflow**  
+✅ **Includes sample data for quick testing**
 
 ---
 
-## 📦 How to Run
-```bash
-pip install -r requirements.txt
-jupyter notebook notebooks/Rainfall_Skill_Evaluation.ipynb
-🌦️ Dataset
-This project originally used rainfall data from the WRF model (CNTL & DA runs)
-and observations from GPM and TRMM satellites for Super Cyclone Kyarr (2019).
+## 🧩 Key Metrics
+| Metric | Description |
+|:--|:--|
+| **POD** | Probability of Detection — model’s success rate in detecting rainfall |
+| **ETS** | Equitable Threat Score — accuracy after removing random hits |
+| **HSS** | Heidke Skill Score — overall model skill against chance |
+| **RMSE** | Root Mean Square Error — deviation from observed rainfall |
+| **Bias** | Mean difference between model and observation |
+| **r** | Pearson correlation — linear agreement strength |
 
-🧠 Citation
-Nishant (2025). WRF Model Rainfall Skill Evaluation (CNTL vs DA). GitHub Repository.
+---
 
-⭐ Star this repo if you find it useful!
-🧑‍🔬 Contributions welcome.
+## 🌦️ Dataset Overview
+
+- **Model Outputs:** CNTL (Control run) & DA (Data Assimilation run)  
+- **Observations:** GPM & TRMM satellite rainfall data  
+- **Event:** *Super Cyclone Kyarr (October 2019)*  
+- **Analysis Period:** Days 1–5 + Combined case (24–30 Oct 2019)
+
+---
+
+## 🧮 Outputs
+
+📊 **Plots:**  
+- Day-wise skill metrics (POD, ETS, HSS, RMSE, Bias, r)  
+- Threshold-wise performance curves  
+- Comparison bar charts across GPM & TRMM  
+
+📑 **Report:**  
+- `Final_Super_Cyclone_Kyarr_Rainfall_Analysis_Report.docx`
+
+---
+
+## 🧠 Citation / Use
+If you use this work, please cite as:
+> *Nishant (2025). WRF Model Rainfall Skill Evaluation (CNTL vs DA). GitHub Repository.*
+
+---
+
+⭐ **Star** this repo if you find it useful!  
+👩‍🔬 Contributions and collaborations welcome!
